@@ -1,0 +1,26 @@
+1. Создать каталоги first и second в домашней директории, а в них — текстовые файлы first.py и second.py, содержащие программы, выводящие на экран числа 1 и 2 соответственно.
+
+ssh -i geb_aws.pem ubuntu@54.244.179.232
+mkdir first
+mkdir second
+cd first
+echo "print(1)" > first.py
+cd ~/second
+echo "print(2)" > second.py
+
+2. Переместите файл second.py в папку first.
+
+mv second.py ~/first
+
+3. Удалите папку second.
+
+cd ..
+rm -r second
+
+4. Переименуйте папку first в first_second.
+
+mv first first_second
+
+5. Удалите папку first_second вместе с содержимым.
+
+rm -r first_second
